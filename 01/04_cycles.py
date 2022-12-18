@@ -37,11 +37,6 @@ for i in range(3):
     print('')
 print('')
 
-# or manually
-for cislo in 8, 45, 9, 11:
-    print(cislo, end=',')
-print('')
-
 points = 0
 while points < 21:
     print('points = ',points)
