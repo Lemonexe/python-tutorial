@@ -4,6 +4,8 @@
 
 ## Run
 windows cmd:
-`venv\Scripts\activate`
+`venv\Scripts\activate`  
 then
 `deactivate`
+
+`python 01/01_henlo.py`
