@@ -13,4 +13,4 @@ print(sqrt(9))
 
 # returns whole number from <0;3), so 0|1|2
 from random import randrange
-randrange(0, 3)
+print(randrange(0, 3))

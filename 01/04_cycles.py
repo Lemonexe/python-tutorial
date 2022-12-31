@@ -4,13 +4,12 @@ from random import randrange
 for i in range(20):
     print(randrange(0, 3), end='')
 
-print('')
+print('') # just to break line..
 for pozdrav in 'Ahoj', 'Hello', 'Hola', 'Hei':
     print(pozdrav + ', ', end='')
 print('')
 
-# unused parameters are usually _, which is normal name
-
+# unused parameters are usually _, which is, however, a normal name (just a convention)
 for _ in range(2):
     print('I am doing this thing twice')
 
