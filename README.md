@@ -17,9 +17,9 @@ First activate venv:
 `venv\Scripts\activate`
 
 Then start any `py` file:  
-`cls & python 01/01_henlo.py`
+`cls & python base/01_henlo.py`
 
-`01/04_cycles.py` can be just opened from explorer...
+`base/04_cycles.py` can be just opened from explorer...
 
 Deactivate venv:  
 `deactivate`
@@ -30,6 +30,6 @@ Save deps:
 `python -m pip freeze > requirements.txt`
 
 Run tests:  
-`python -m pytest -v 01/09_testable.py`
+`python -m pytest -v base/09_testable.py`
 
 Lol :)

@@ -1,5 +1,5 @@
 # python -m pip install pytest
-# python -m pytest -v 01/09_testable.py
+# python -m pytest -v base/09_testable.py
 
 import pytest
 

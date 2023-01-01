@@ -19,7 +19,7 @@ def klik(x, y, tlacitko, mod):
 
 pyglet.clock.schedule_interval(tik, 0.5) # interval with one second
 
-had_file = pyglet.image.load('01/had.png')
+had_file = pyglet.image.load('base/had.png')
 had = pyglet.sprite.Sprite(had_file)
 
 def draw_had():
