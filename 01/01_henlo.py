@@ -8,11 +8,20 @@ print(32%5)
 print(32//5)
 print("Součet čísel 3 a 8 je", 3 + 8)
 
-var = 123
-print(var)
+print(True, False, 2>3)
 
-# operators: 
+# OPERATORS: 
 #  +   -   *  /  //  %   **
 #  ==  !=  >  <  >=  <=
+# and  or  not
+# & | ^  is bitwise and,or,xor
 
-print(True,False,2>3)
+# ASSIGNMENT:
+var = 123
+var += 50; var -= 23; var *= 2; var /= 6
+# analogically  *=  /=  **=
+print(var)
+
+var = False
+var |= True # var = var | True, BEWARE IT'S BITWISE!!
+# analogically  &=  ^=
