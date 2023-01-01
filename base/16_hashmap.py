@@ -8,8 +8,7 @@ del slovnik['Knoflík']
 print(slovnik)
 
 for key in slovnik:
-    print(key, end=', ')
-print('')
+    pass # do nothing
 
 # like enumerate:
 for key, value in slovnik.items():

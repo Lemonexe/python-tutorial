@@ -30,6 +30,6 @@ Save deps:
 `python -m pip freeze > requirements.txt`
 
 Run tests:  
-`python -m pytest -v base/09_testable.py`
+`tests.bat`
 
 Lol :)

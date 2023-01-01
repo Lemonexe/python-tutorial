@@ -28,6 +28,7 @@ mourek = Kotatko() # class is capitalized, instance is not capitalized
 mourek.zamnoukej()
 mourek.jmeno = 'Mourek'
 print(f"teď už {mourek.jmeno}")
+print('má jméno? ' + str(hasattr(mourek, 'jmeno')))
 # mourek.zamnoukej = 12345 # of course I could just overwrite the method with anything
 
 bashka = Kotatko('Bažka') # class is capitalized, instance is not capitalized
