@@ -24,3 +24,26 @@ set_x(1)
 print(f'x = {x} (global)')
 
 # moral of the story: don't shadow! incl. parameter, its name also must not shadow
+
+# optional args (they are a tuple)
+def say_something(*args):
+    print(args if args else 'Idk what to say..')
+say_something()
+say_something(1, 2, 3)
+
+# function annotations - just arbitrary metadata. But they are metadata, not just a comment!
+def kinetic_energy(m:'[kg]', v:'[m/s]') -> '[J]':
+    return .5*m*v**2
+kinetic_energy(1, 2)
+print(kinetic_energy.__annotations__) # programmatically accessible - may be useful for code from libs?
+
+# lambda function hell yeah!
+from math import exp
+p0 = 101.325 # kPa
+M = 28e-3 # kg/mol
+RT = 8.314 * 298 # J/mol
+g = 9.81 # m/s2
+pressure = lambda h: p0 * exp(-h*g*M/RT)
+print("mt. everest pressure: {:.2f} kPa".format(pressure(8848)))
+p0 = 200 # p0 is byRef in the lambda. this is more like JS, not like matlab
+print("at thicker atmosfere: {:.2f} kPa".format(pressure(8848)))

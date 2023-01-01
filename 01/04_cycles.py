@@ -49,3 +49,4 @@ elif points > 0:
     print('OK final points = ',points)
 else:
     print('coward...')
+input('Press Enter to continue...')
