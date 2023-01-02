@@ -1,3 +1,11 @@
+# iterable datatypes = datatypes upon which iter() can be called
+iterator = iter([1,2,3]) # creates the iteration collection
+print(iterator, '\n', next(iterator), next(iterator)) # next() is special fn that advances the iterator (remembers its state)
+
+for x in [1,2,3]: # could be rewritten using while iterator=iter([1, 2, 3]) && next(iterator) but why bother
+    pass
+print('')
+
 # ENUMERATE - creates a sequence that enumerates a list - a sequence of (index, value)
 dny = ['Po', 'Út', 'St', 'Čt', 'Pá', 'So', 'Ne']
 enum = enumerate(dny)
@@ -5,7 +13,6 @@ print(list(enum))
 # print(enum[3]) # you can't do anything with an enum, not even select elements
 
 # but this is not completely useless!
-
 # UNZIPPING an ENUM
 for index,den in enumerate(dny, start=1):
     # the start param doesn't slice the array, it just specifies where the numbering starts

@@ -14,3 +14,6 @@ print(sqrt(9))
 # returns whole number from <0;3), so 0|1|2
 from random import randrange
 print(randrange(0, 3))
+
+from math import nan as NaN
+NaN == NaN # does not equal. It never does, not in Js either.

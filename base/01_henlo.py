@@ -25,3 +25,5 @@ print(var)
 var = False
 var |= True # var = var | True, BEWARE IT'S BITWISE!!
 # analogically  &=  ^=
+
+print(dir()) # prints variables of this scope

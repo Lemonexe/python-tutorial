@@ -10,7 +10,8 @@ def ls(arg):
 ls(zviratka)
 
 zviratka.append('želva')
-# extend = concat, pop = pop, insert ~ splice, remove, sort, clear, reverse...
+# zviratka.extend(['holub', 'kapr']) # extend = concat
+# pop = pop, insert ~ splice, remove, sort, clear, reverse...
 
 zverinec = zviratka # as expected, it is by ref...
 zverinec.insert(1, 'myš') # insert to index 1
@@ -43,7 +44,13 @@ zviratka2 = list(zverinec) #  makes a copy (by val)
 zviratka2.pop() # pop last (želva)
 zviratka2.pop(1) # pop [1] (myš)
 zviratka2.remove('pes') # remove first occurence of pes
-print('Copied list is not mutated: ', end=''); ls(zverinec) # želva has survived
+print('Mutated list2: ', end=''); ls(zviratka2)
+
+zviratka3 = list(zverinec)
+del zviratka3[1:3] # deletes <1;3) so only 1,2
+print('Mutated list3: ', end=''); ls(zviratka3)
+
+print('Copied list was not mutated: ', end=''); ls(zverinec) # želva has survived
 
 print('Splitted: ', end=''); ls('asdf,gghjk,aa'.split(','))
 

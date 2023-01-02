@@ -6,6 +6,9 @@ elif var == 3:
 else:
     print('var is <= 3')
 
+if True:
+    pass # pass doesn't do anything, it's a placeholder for future code, or for code examples and such...
+
 print('this is outside of the condition')
 
 # available bool operators: and, or, not
