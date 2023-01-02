@@ -1,6 +1,7 @@
 # Python tutorial
 
-[tutorial link](https://naucse.python.cz/course/pyladies/beginners/venv-setup/)
+[tutorial base](https://naucse.python.cz/course/pyladies/)  
+[tutorial MI-pyt](https://naucse.python.cz/course/mi-pyt/)
 
 All commands are for windows cmd...
 
