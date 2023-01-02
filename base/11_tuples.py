@@ -29,5 +29,8 @@ print(c, h, a, r)
 empty = ()
 uniple = (1,)
 
-# easily arraify a touple
+# easily listify a touple
 print(list(dvojice))
+
+# or tuplify a list
+print(tuple([1, 2, 3, 4]))
