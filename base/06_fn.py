@@ -31,15 +31,17 @@ def say_something(*args):
 say_something()
 say_something(1, 2, 3)
 
+
 # function annotations - just arbitrary metadata. But they are metadata, not just a comment!
 def kinetic_energy(m:'[kg]', v:'[m/s]') -> '[J]':
     return .5*m*v**2
 Ek1 = kinetic_energy(7, 11)
 # if there are many parameters, we can dump them from array
-params = [7, 11] 
+params = [7, 11]
 Ek2 = kinetic_energy(*params)
 print(f"Ek = {Ek1} = {Ek2}")
 print(kinetic_energy.__annotations__) # programmatically accessible - may be useful for code from libs?
+
 
 # lambda function hell yeah!
 from math import exp

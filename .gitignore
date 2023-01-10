@@ -1,3 +1,4 @@
 venv/
 __pycache__/
 pdf/
+base/write-test.txt

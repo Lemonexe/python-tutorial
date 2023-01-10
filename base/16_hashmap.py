@@ -34,6 +34,7 @@ slovnik.items() # actually list of tuples [(key, value), ...]
 # let's try a little bit of real-life JSON
 import json
 import requests
+# BTW this is synchronous!
 page = requests.get('https://jira.zby.cz/content/UUC/app/currencies.php')
 
 page.raise_for_status() # raise if status not 200

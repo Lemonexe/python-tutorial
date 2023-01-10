@@ -20,7 +20,7 @@ First activate venv:
 Then start any `py` file:  
 `cls & python base/01_henlo.py`
 
-`base/04_cycles.py` can be just opened from explorer...
+Only the file `base/04_cycles.py` can be just opened from explorer...
 
 Deactivate venv:  
 `deactivate`

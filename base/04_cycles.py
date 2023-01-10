@@ -20,7 +20,7 @@ odpoved = input('Řekni aaa! ')
 while odpoved.lower() != 'aaa':
     print('Špatně, zkus to znovu')
     odpoved = input('Řekni aaa! ')
-# btw I think shadowing is not possible. When I assing to odpoved, it assigns to the upper scope variable odpoved
+# ifs, whiles etc. do not have their scope (like functions see l8r) -> odpoved assigns to the upper scope var
 print(odpoved+'\n')
 
 while True:

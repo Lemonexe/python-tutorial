@@ -5,11 +5,12 @@ def nacti_cislo():
         num = 0
         try:
             num = int(odpoved)
-            # obviously we had return here & in the except block
-            # it would catch to the except block in case of error.. but else & finally would be unreachable
-            # duh.. But I spent a good half an hour or so debugging this xD
+            # NOTE: if we had return int(odpoved), with some other return in the except block,
+            # it would catch to the except block in case of error.. BUT else & finally would be unreachable!
+            # obviously, duh.. But I spent a good half an hour or so debugging this xD
         except ValueError:
             print('value error')
+            # rethrow the error:
             # raise ValueError(f'input "{odpoved}" is not numerical')
 
         except Exception: # will catch all errors

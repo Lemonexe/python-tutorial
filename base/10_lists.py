@@ -13,7 +13,7 @@ zviratka.append('želva')
 # zviratka.extend(['holub', 'kapr']) # extend = concat
 # pop = pop, insert ~ splice, remove, sort, clear, reverse...
 
-zverinec = zviratka # as expected, it is by ref...
+zverinec = zviratka # as expected, it is byRef...
 zverinec.insert(1, 'myš') # insert to index 1
 
 ls(zviratka)
@@ -40,7 +40,7 @@ else:
 # list() transforms range to list, or a string to list of chars
 ls(list(range(7, 16)))
 
-zviratka2 = list(zverinec) #  makes a copy (by val)
+zviratka2 = list(zverinec) #  makes a copy (byVal)
 zviratka2.pop() # pop last (želva)
 zviratka2.pop(1) # pop [1] (myš)
 zviratka2.remove('pes') # remove first occurence of pes

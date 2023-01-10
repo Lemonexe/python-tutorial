@@ -31,11 +31,11 @@ print(f"teď už {mourek.jmeno}")
 print('má jméno? ' + str(hasattr(mourek, 'jmeno')))
 # mourek.zamnoukej = 12345 # of course I could just overwrite the method with anything
 
-bashka = Kotatko('Bažka') # class is capitalized, instance is not capitalized
+bashka = Kotatko('Bažka')
 bashka.sezrat('rybu') # first param of any method is always self, the other params are callable
 bashka.sezrat(zradlo='rybu') # it's better codestyle to explicitly assign the param.
 
-print(bashka, str(bashka))
+print(bashka, str(bashka)) # the same thing
 
 # NOW LET'S CREATE A ŠTĚŇÁTKO, but to avoid boilerplate it will inherit
 class Zviratko:
@@ -55,7 +55,7 @@ class Stenatko(Zviratko):
     # superclass already has "sezrat", so override it
     def sezrat(self, zradlo):
         print(f"{self.jmeno} nejdříve {zradlo} očuchává")
-        # if we want to extend original fn, just call it now on the superclass
+        # if we want to extend original fn, just call it now on the superclass, like this:
         super().sezrat("očuchané "+zradlo)
 
 zeryk = Stenatko('Žeryk')
