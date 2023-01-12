@@ -19,7 +19,7 @@ print(f"\nare obj & obj2 actually THE SAME INSTANCE? {obj is obj2}")
 a = tuple((3, 4)) # how about it takes two arguments instead of tuple, to create a tuple?
 class Bod(tuple): # inherit from tuple
     def __new__(cls, x, y):
-        return super().__new__(cls, (x, y))
+        return super().__new__(cls, (x, y)) # super().__new__(arg) means simply tuple(arg)
 
 b = Bod(3, 4)
 print('\n', a, b)

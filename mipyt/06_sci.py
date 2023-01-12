@@ -79,7 +79,7 @@ plt.show()
 
 # SPLINE INTERPOL
 x = np.linspace(2, 17, num=7)
-y = x**2 + np.sin(x) + 1.2
+y = x**2 + 50*np.sin(x) + 1.2
 
 spline_fn = UnivariateSpline(x, y)
 xs = np.linspace(np.min(x), np.max(x), num=100)

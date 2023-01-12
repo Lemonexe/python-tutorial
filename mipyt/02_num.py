@@ -12,7 +12,7 @@ print(f"cube has dimensions: {cube.ndim}") # number of dimensions (3 in this cas
 
 arry2 = (array - 1)/2
 print(arry2)
-print(arry2.dtype)
+print(arry2.dtype) # automatically retyped
 print('')
 
 print(array > 5)
@@ -58,14 +58,14 @@ except Exception as e:
 # MATRIX GENERATION FUNCTIONS
 np.zeros((4, 4))
 np.ones((4, 4))
-np.ones((4, 4), dtype='float64') # specifies type explicitly instead of using default
+np.ones((4, 4), dtype='float64') # specifies type explicitly instead of using inferred
 np.zeros(4, dtype=bool)
-np.full((4, 4), 7.34) # equivalent to np.ones(0, 0) * 7.34
+np.full((4, 4), 7.34) # equivalent to np.ones((4, 4)) * 7.34
 np.eye(4)
 np.diag([1, 2, 3, 4, 5])
 np.arange(100, 140, 3) # like python range, it creates a vector (min, max, step)
 np.arange(0.0, 50.0, 0.3)[-1] # NOPE!! Beware that arange accumulates floating point error! -> DO NOT USE ARANGE FOR FLOATS
-np.linspace(3, 31, num=11) # this is good for floats (start & end values are exact)
+np.linspace(3, 31.76, num=11) # this is good for floats (start & end values are exact)
 np.random.random((4, 2)) # 4x2 random values 0 to 1
 
 arr = np.arange(12)

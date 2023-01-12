@@ -16,7 +16,7 @@ def test_raise():
     with pytest.raises(SystemExit):
         faulty_function()
 
-# call the same function with multiple different parameters, the value is injected as 'x'
+# call the same function with multiple different parameters, the value is injected as 'n'
 def is_even(n):
     return n % 2 == 0
 
@@ -36,7 +36,7 @@ class Client:
 def client():
     return Client()
 
-def test_fixture(client): # param must be named exactly same as the fixture
+def test_fixture(client): # param must be named exactly same as the fixture, so it can be injected here
     assert hasattr(client, 'asdf')
 
 # for HTTP requests we need betamax - like VCR cassettes in ruby

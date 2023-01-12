@@ -12,7 +12,7 @@ items = pd.DataFrame([["Book", 123], ["Computer", 2185]])
 # or froma array of hashmaps, btw I made a mistake here. It will create two columns price and priue, with some NaNs
 items = pd.DataFrame([{"name": "Book", "price": 123}, {"name": "Computer", "priue": 2185}])
 
-actors.info() # some nerd stuff
+actors.info() # dump the table with additional metadata; it logs into console
 
 # unlike NumPy the datatypes are dynamic: if I assign 0.3 to integer, it will automatically retype
 
@@ -40,9 +40,9 @@ print('Počet unikátních hodnot: ', yrs.nunique())
 print('Koeficient špičatosti: ', yrs.kurtosis())
 
 # this is like Javascript Array.map
-actors['name'].apply(lambda nm: nm[::-1])
+actors['name'].apply(lambda nm: nm[::-1]) # this reverses the string, wtf?
 
-actors['alive'].apply({True: 'alive', False: 'deceased'}.get) # this is function callback, no need for lambda
+actors['alive'].apply({True: 'alive', False: 'deceased'}.get) # this itself is function callback, no need for lambda
 
 # selecting whole dataframe
 actors[1:-1] # select

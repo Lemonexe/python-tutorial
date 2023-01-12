@@ -2,6 +2,7 @@
 
 # click library helps to create interactive CLI applications (which is ofc possible w/o it)
 import click
+import os
 
 # it uses DECORATORS
 @click.command() # this causes click to process the sys.argv
@@ -11,18 +12,20 @@ import click
 # they respond either to -c or --count, as per unix convention
 
 # the first three args are injected from the decorators
-def hello(count, name, verb, dir):
+def hello(count, name, verbose):
+    dir = os.getcwd()
     for x in range(count):
-        click.echo(f"Hello {name}, we will do directory {dir}")
-    if verb:
+        click.echo(f"Hello {name}, we are in directory {dir}")
+    if verbose:
         click.echo('Nice to meet you')
 
 def another_fn(count, name, verbose):
     print(count, name)
 # another_fn() # this errors out because this function is not decorated
 
-# if the file is executed directly, else if imported, tghe sys.argv wouldn't be available
+# if the file is executed directly, else if imported, the sys.argv wouldn't be available
 if __name__ == '__main__':
     hello()
 
-# btw click can also be used for arguments (obligatory, without the --name) or file opening etc.
+# btw click can also be used for arguments or file opening etc.
+# arguments are like options but obligatory & with given order, not identified the --name
