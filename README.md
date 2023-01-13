@@ -10,12 +10,12 @@ Create venv:
 `py -3 -m venv venv`
 
 Install deps:  
-`venv\Scripts\activate`  
+`venv\scripts\activate`  
 `python -m pip install -r requirements.txt`
 
 ## Run
 First activate venv:  
-`venv\Scripts\activate`
+`venv\scripts\activate`
 
 Then start any `py` file:  
 `cls & python base/01_henlo.py`
