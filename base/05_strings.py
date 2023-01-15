@@ -28,6 +28,11 @@ templat = "Ahoy {jmeno}, your x = {cislo}"
 print(templat) # not what we want
 print(templat.format(cislo=7, jmeno="Lemonexe"))
 
+# number formatting
+print('x = {:.2f}, y = {:7.2e}'.format(1/7, 2**23))
+
 # other things
 trimmed =  '   a   '.strip()
 replaced = 'asdf'.replace('as', 'qw')
+charCodeAt = ord('a')
+charFromCode = chr(charCodeAt)
