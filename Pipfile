@@ -33,6 +33,12 @@ six = "==1.16.0"
 urllib3 = "==1.26.13"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.11"
+
+[scripts]
+printspam = "python -c \"print('I am a silly example, no one would need to do this')\""
+lint = "echo.> __init__.py & pipenv run pylint %cd%/RI --disable=C,R & del __init__.py"
+lintErrorsOnly = "echo.> __init__.py & pipenv run pylint %cd%/RI --errors-only & del __init__.py"

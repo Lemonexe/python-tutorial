@@ -1,5 +1,7 @@
 # Python tutorial
 
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+
 [tutorial base](https://naucse.python.cz/course/pyladies/)  
 [tutorial MI-pyt](https://naucse.python.cz/course/mi-pyt/)
 
@@ -49,10 +51,14 @@ Or run files through pipenv run **(preferred)**:
 
 ## Development
 
-Save deps (for vanilla pip):  
+Install a new dep: `pipenv install numpy`
+
+Save deps after any install – for vanilla pip:  
 `python -m pip freeze > requirements.txt`
 
 Run tests:  
 `test.bat`
+
+Lint. Kind of? Lol! `pipenv run lint`
 
 Lol :)
