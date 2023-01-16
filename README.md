@@ -5,7 +5,15 @@
 
 All commands are for windows cmd...
 
+
 ## Setup
+
+### Install
+Install [python](https://www.python.org/downloads/), [follow guide](https://naucse.python.cz/course/pyladies/beginners/install/windows/)  
+Then `pip install --user pipenv`  
+Add to path, typically at `%userprofile%\AppData\Roaming\Python\Python311\Scripts`
+
+### vanilla setup
 Create venv:  
 `py -3 -m venv venv`
 
@@ -13,21 +21,35 @@ Install deps:
 `venv\scripts\activate`  
 `python -m pip install -r requirements.txt`
 
+### pipenv setup
+Create venv, install deps:  
+`pipenv install`
+
 ## Run
-First activate venv:  
-`venv\scripts\activate`
+
+### vanilla
+
+First activate venv: `venv\scripts\activate`  
+(deactivate: `deactivate`)
 
 Then start any `py` file:  
 `cls & python base/01_henlo.py`
 
-Only the file `base/04_cycles.py` can be just opened from explorer...
+Btw only the file `base/04_cycles.py` can simply be opened from explorer...
 
-Deactivate venv:  
-`deactivate`
+
+### pipenv
+
+Either activate shell: `pipenv shell`  
+(deactivate: `exit`)
+
+Or run files through pipenv run **(preferred)**:  
+`cls & pipenv run python base/01_henlo.py`
+
 
 ## Development
 
-Save deps:  
+Save deps (for vanilla pip):  
 `python -m pip freeze > requirements.txt`
 
 Run tests:  
