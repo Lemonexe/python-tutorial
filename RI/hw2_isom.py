@@ -12,14 +12,14 @@ def hw2_isom():
     cAi = 9300  # [mol/m3]
     cs = cAi / xi0[0]  # total concentration shall remain constant [mol/m3]
     # cBi = 0
-    cCi = cs * xi0[2]  # [mol/m3]
+    # cCi = cs * xi0[2]  # [mol/m3]
     n = 163e3  # feed rate [mol/h]
     x_target = 0.70  # target conversion
 
     # stoichiometry of reaction - conversion functions
     cA = lambda x: cAi * (1 - x)
     cB = lambda x: x * cAi
-    cC = lambda x: cCi
+    # cC = lambda x: cCi
 
     Ea = 65.7e3  # [J/mol]
     Tk0 = 360  # [K]
@@ -100,7 +100,7 @@ def hw2_isom():
     print('V    = {:.2f} m3'.format(np.max(V)))
     print('Tout = {:.1f}°C'.format(np.max(T)))
 
-    fig, ax = plt.subplots()
+    _, ax = plt.subplots()
     ax.plot(V, x, 'k-')
     ax.plot([0, np.max(V)], [x_eq * 100, x_eq * 100], 'k:')
     ax.set_xlim(0)

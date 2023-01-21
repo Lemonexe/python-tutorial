@@ -63,7 +63,7 @@ Run tests:
 Run Prettier:  
 `pipenv run prettier`
 
-Lint kind of? Not really using it..  
+Lint, but only for folder `RI`:  
 `pipenv run lint`
 
 Lol :)

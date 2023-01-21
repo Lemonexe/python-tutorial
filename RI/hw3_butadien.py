@@ -6,7 +6,7 @@ def hw3_butadien():
     # constants
     p = 120e3  # [Pa]
     p_std = 101325  # [Pa]
-    T = 911  # [K]
+    # T = 911  # [K]
     Kp = 1.27  # eq constant
     n0 = 13.88  # [mol/s]
 
@@ -30,7 +30,7 @@ def hw3_butadien():
     X_target = 0.95 * X_eq  # target butadien conversion
 
     dVdX = lambda X: n0_i[0] / r(p_i(X))  # derivation dV/dX [m3]
-    V, err = sp.integrate.quad(dVdX, 0, X_target)  # reactor volume [m3]
+    V, _ = sp.integrate.quad(dVdX, 0, X_target)  # reactor volume [m3]
 
     print('X target = {:.1f}%:'.format(X_target * 100))
     print('V = {:.2f} m3'.format(V))
