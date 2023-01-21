@@ -34,11 +34,13 @@ urllib3 = "==1.26.13"
 
 [dev-packages]
 pylint = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.11"
 
 [scripts]
 printspam = "python -c \"print('I am a silly example, no one would need to do this')\""
+prettier = "pipenv run yapf -i -r RI"
 lint = "echo.> __init__.py & pipenv run pylint %cd%/RI --disable=C,R & del __init__.py"
 lintErrorsOnly = "echo.> __init__.py & pipenv run pylint %cd%/RI --errors-only & del __init__.py"

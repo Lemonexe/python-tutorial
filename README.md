@@ -1,6 +1,7 @@
 # Python tutorial
 
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
+_Lol JK not rly.._
 
 [tutorial base](https://naucse.python.cz/course/pyladies/)  
 [tutorial MI-pyt](https://naucse.python.cz/course/mi-pyt/)
@@ -59,6 +60,10 @@ Save deps after any install – for vanilla pip:
 Run tests:  
 `test.bat`
 
-Lint. Kind of? Lol! `pipenv run lint`
+Run Prettier:  
+`pipenv run prettier`
+
+Lint kind of? Not really using it..  
+`pipenv run lint`
 
 Lol :)
