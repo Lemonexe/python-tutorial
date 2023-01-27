@@ -26,7 +26,7 @@ Install deps:
 
 ### pipenv setup
 Create venv, install deps:  
-`pipenv install`
+`pipenv install --dev`
 
 ## Run
 
