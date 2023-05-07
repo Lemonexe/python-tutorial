@@ -36,7 +36,7 @@ print(list(dvojice))
 numbers = tuple([1, 2, 3, 4])
 
 
-# BTW the map function is available for anything iterable
+# BTW the map function is available for anything iterable (see 13_iterators.py)
 # it returns a "map object", so you have to typecast the returnable
 print(tuple(map(lambda x: x*2, numbers)))
 # or destructure it if there is exact number of elems

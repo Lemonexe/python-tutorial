@@ -4,7 +4,7 @@ mess = [78, None, range(10), len] # really anything can be here...
 print(mess)
 
 def ls(arg):
-    # see explanation below...
+    # see explanation of map below...
     print(', '.join(map(str, arg))) # join is function of the string, the delimiter, not of list!!??
 
 ls(zviratka)
@@ -65,3 +65,12 @@ print(f'Random zvířátko: {random.choice(zverinec)}')
 # obviously a 2D list
 zverince = [zverinec, zviratka2]
 print(zverince)
+
+# map & filter is generic function, not method of list, because it can be applied to other iterable types (see 13_iterators.py)
+# it returns a "map object" or "filter object", so you have to typecast the returnable
+ls(list(filter(lambda zvire: len(zvire)>3, zverinec)))
+
+# list comprehension, a shorthand syntax for mapping, filtering etc.
+zviratka4 = [x+' obecný' for x in zverinec if len(x)>3]
+# can be just [x for x in zverinec], optionally I can map the x expression, and add if condition
+ls(zviratka4)
