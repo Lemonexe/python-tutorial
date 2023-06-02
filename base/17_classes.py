@@ -39,6 +39,7 @@ print(bashka, str(bashka)) # the same thing
 
 # NOW LET'S CREATE A ŠTĚŇÁTKO, but to avoid boilerplate it will inherit
 class Zviratko:
+    asdf = 123
     def __init__(self, *args):
         self.jmeno = args[0] if args else 'bezejmenné '+self.species
     def sezrat(self, zradlo):
@@ -49,7 +50,17 @@ class Zviratko:
 # inheritance is easy like that. Zviratky is superclass, Stenatko is subclass
 class Stenatko(Zviratko):
     species = '100% PES'
+
+    """
+    BTW Stenatko DOES NOT HAVE __init__(), that's why Zviratko.init is called!
+    But if had init, it'd override the Zviratko init, so I'd have to then explicitly call Zviratko init:
+    def __init__():
+        super().__init__()
+        ...more_stuff()
+    """
+
     def zastekej(self):
+        print(self.asdf)
         print(f"Haf štěk já jsem {self.jmeno}")
 
     # superclass already has "sezrat", so override it
