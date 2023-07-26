@@ -70,6 +70,9 @@ class Stenatko(Zviratko):
         super().sezrat("očuchané "+zradlo)
 
 zeryk = Stenatko('Žeryk')
+print(f'Žeryk je pes? {isinstance(zeryk, Stenatko)}')
+print(f'Žeryk je zvíře? {isinstance(zeryk, Zviratko)}')
+print(f'Žeryk je kočka? {isinstance(zeryk, Kotatko)}')
 zeryk.zastekej()
 dog = Stenatko()
 dog.sezrat('kost')
